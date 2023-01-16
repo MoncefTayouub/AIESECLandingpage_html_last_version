@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="conainer center">
+        <h3>Sign up</h3>
+        <div class="box center">
+            <p>Name</p>
+            <input placeholder="name"  class="rad40" id="signName" />
+        </div>
+        <div class="box center">
+            <p>email</p>
+            <input placeholder="email" class="rad40"  id="signEmail" />
+        </div>
+        <div class="box center">
+            <p>password</p>
+            <input class="rad40" placeholder="password" id="signPassword"  />
+        </div>
+        <button onclick="submiting()" class="rad40">Submit</button>
+    </div>
+
+    <div class="conainer center">
+        <h3>Login</h3>
+        <div class="box center">
+            <p>Name</p>
+            <input placeholder="name"  class="rad40"    id="loginName"  />
+        </div>
+        
+        <div class="box center">
+            <p>password</p>
+            <input class="rad40" placeholder="password" id="loginPassword"  />
+        </div>
+        <button onclick="login()"  class="rad40">Submit</button>
+    </div>
+
+    <div class="conainer center">
+        <h3>Change password</h3>
+        <div class="box center">
+            <p>Username</p>
+            <input placeholder="name"  class="rad40" id="changeName" />
+        </div>
+        
+        <div class="box center">
+            <p>New password</p>
+            <input class="rad40" placeholder="password" id="changePassword"  />
+        </div>
+        <button onclick="changePassword()" class="rad40">Submit</button>
+    </div>
+
+    <div class="conainer center">
+        <h3>Add MC</h3>
+        <div class="box center">
+            <p>name</p>
+            <input placeholder="name"  class="rad40" id="addMcName" />
+        </div>
+        
+        <div class="box center">
+            <p>why</p>
+            <input class="rad40" placeholder="why" id="addwhy"  />
+        </div>
+        <div class="box center">
+            <p>how</p>
+            <input class="rad40" placeholder="how" id="addhow"  />
+        </div>
+        <div class="box center">
+            <p>what</p>
+            <input class="rad40" placeholder="what" id="AddWhat"  />
+        </div>
+        <div class="box center">
+            <p>vision</p>
+            <input class="rad40" placeholder="vision" id="AddVision"  />
+        </div>
+        <div class="box center">
+            <p>picture</p>
+            <input class="rad40" placeholder="picture" id="AddPicture" type="file"  />
+        </div>
+        <div class="box center">
+            <p>Term</p>
+            <input class="rad40" placeholder="Date" id="addDate" type="number"  />
+        </div>
+       
+        <button onclick="AddMc()" class="rad40">Submit</button>
+    </div>
+
+    
+    <div class="conainer center">
+        <h3>Add MC</h3>
+        <div class="box center">
+            <label for="cars" id="getItem">Choose an MC:</label>
+                <select name="cars" id="droplist" class=""></select>
+        </div>
+        <div class="box center">
+            <p>Full Name</p>
+            <input placeholder="name"  class="rad40" id="addMcMemberName" />
+        </div>
+        <div class="box center">
+            <p>deparment</p>
+            <input class="rad40" placeholder="e.g B2C " id="addMcMemberdeparment"  />
+        </div>
+        <div class="box center">
+            <p>whatsapp</p>
+            <input class="rad40" placeholder="06******" id="whatsapp"  />
+        </div>
+        <div class="box center">
+            <p>instagram</p>
+            <input class="rad40" placeholder="link" id="instagram"  />
+        </div>
+        <div class="box center">
+            <p>linkedin</p>
+            <input class="rad40" placeholder="link" id="linkedin"  />
+        </div>
+        <div class="box center">
+            <p>facebook</p>
+            <input class="rad40" placeholder="link" id="facebook"  />
+        </div>
+       
+        <div class="box center">
+            <p>picture</p>
+            <input class="rad40" placeholder="picture" id="MCPicture" type="file"  />
+        </div>
+        
+       
+        <button onclick="addMCMember()" class="rad40">Submit</button>
+    </div>
+
+
+
+    <div class="conainer center">
+        <h3>Add event</h3>
+        <div class="box center">
+            <p>Name</p>
+            <input placeholder="name"  class="rad40" id="EventName" />
+        </div>
+        <div class="box center">
+            <p>venue</p>
+            <input placeholder="email" class="rad40"  id="EventVenue" />
+        </div>
+        <div class="box center">
+            <p>venue address link maps</p>
+            <input class="rad40" placeholder="" id="eventVenLink"  />
+        </div>
+        <div class="box center">
+            <p>date</p>
+            <input class="rad40" format="yyyy-mm-dd" placeholder="" id="eventdate" type="date"  />
+        </div>
+        <div class="box center">
+            <p>registration link form</p>
+            <input class="rad40" placeholder="" id="eventform"  />
+        </div>
+        <div class="box center">
+            <p>time</p>
+            <input class="rad40"  placeholder="" id="eventTime"  />
+        </div>
+        <div class="box center">
+            <p>AIESECERS_or_youth</p>
+            <input class="rad40" placeholder="" id="eventIfAiesecer"  />
+        </div>
+        <div class="box center">
+            <p>link_page</p>
+            <input class="rad40" placeholder="" id="eventLinkPage"  />
+        </div>
+        <div class="box center">
+            <p>limited_places_OR_nonlimited</p>
+            <input class="rad40" placeholder="" id="eventlimited_places_OR_nonlimited"  />
+        </div>
+        <div class="box center">
+            <p>city_name</p>
+            <input class="rad40" placeholder="" id="event_city_name"  />
+        </div>
+        <div class="box center">
+            <p>description</p>
+            <input class="rad40" placeholder="" id="event_description"  />
+        </div>
+        
+        <div class="box center">
+            <p>picture</p>
+            <input class="rad40" placeholder="picture" id="eventPic" type="file"  />
+        </div>
+        <button onclick="AddEvent()" class="rad40">add event</button>
+    </div>
+
+    <div class="conainer center">
+        <h3>Qestion and Answer</h3>
+        <div class="box center">
+            <p>Question</p>
+            <input placeholder="question ? "  class="rad40" id="question" />
+        </div>
+        
+        <div class="box center">
+            <p>Answer</p>
+            <input class="rad40" placeholder="Answer" id="Answer"  />
+        </div>
+        <button onclick="AddQestion_Answer()" class="rad40">Submit</button>
+    </div>
+
+    <div class="conainer center">
+        <h3>Add Form </h3>
+        <div class="box center">
+            <p>joinAIESC</p>
+            <input placeholder="joinAIESC ? "  class="rad40" id="joinAIESC" />
+        </div>
+        
+        <div class="box center">
+            <p>beApartner</p>
+            <input class="rad40" placeholder="beApartner" id="beApartner"  />
+        </div>
+        <div class="box center">
+            <p>EP</p>
+            <input class="rad40" placeholder="EP" id="EP"  />
+        </div>
+        <button onclick="AddForm()" class="rad40">Submit</button>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html> 

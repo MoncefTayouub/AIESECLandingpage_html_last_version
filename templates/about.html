@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="{% static 'assets/images/Blue man-02.jpg' %}  ">
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+    <!-- Why HOW What Links --> 
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>AIESEC IN MOROCCO</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href=" {% static 'vendor/bootstrap/css/bootstrap.min.css' %} " rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static  'assets/css/fontawesome.css' %}  ">
+    <link rel="stylesheet" href=" {% static  'assets/css/templatemo-woox-travel.css'%} ">
+    <link rel="stylesheet" href="{% static   'assets/css/owl.css'%} ">
+    <link rel="stylesheet" href="{% static  'assets/css/animate.css'%} ">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <!-- Quotes -->
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+      
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}  ">
+    <link rel="stylesheet" href=" {% static 'css/owl.theme.default.min.css' %} ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<!--
+
+TemplateMo 580 Woox Travel
+
+https://templatemo.com/tm-580-woox-travel
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+        <img id="videoElm" src=" {% static 'assets/images/load.gif' %} " alt='loader'  />
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+   
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="{% static ' assets/images/Aiesec white black.png ' %} " alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html" >Home</a></li>
+                      <li><a href="about.html" class="active">About</a></li>
+                      <li><a href="deals.html">Events</a></li>
+                      <li><a href="reservation.html">Contact-Us</a></li>
+                      <li><a href="reservation.html">Book Yours</a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <div class="about-main-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content">
+            <div class="blur-bg"></div>
+            <h4>AIESEC in Morocco</h4>
+            <div class="line-dec"></div>
+            <h2>Discover our culture</h2>
+            <p>Our mission is to help developping more moroccan youth for a better future of our country and for the world. We do that by spreding our impact nationally and helping many youth. <br> Daring to reach the optimum state </p>
+            <!-- <div class="main-button">
+              <a href="reservation.html">Discover More</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Main Banner Area End ***** -->
+  
+  <!-- ***** LCs Section ***** -->
+  <div class="cities-town">
+    <div class="container">
+      <div class="row">
+        <div class="slider-content">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>AIESEC in <em>13 Cities</em></h2>
+            </div>
+            <div class="col-lg-12">
+              <div class="owl-cites-town owl-carousel">
+                {% for s in  lcs %}
+                <div class="item">
+                  <div class="thumb">
+                    <img src="http://127.0.0.1:8000/{{s.picture}} " alt="">
+                    <h4>{{s.name}}</h4>
+                  </div>
+                </div>
+              {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ***** AIESEC in Morocco History***** -->
+<div class=""> <!-- container -->
+  <div class="row justify-content-center text-center mb-5 mt-5">
+    <div class="col-md-6 mb-5">
+      <h2 class="about">Our History</h2>
+    </div>
+  </div>
+  <section id="timeline" class="col-lg-12">    
+        <div class="tl-item">
+          
+          <div class="tl-bg" style="background-image: url(assets/images/aiesec\ ai.png)"></div>
+          
+          <div class="tl-year">
+            <p class="f2 heading--sanSerif">1986</p>
+              <p class="f2 heading--sanSerif">1995</p>
+          </div>
+          <div class="tl-content text-center">
+            <h5 class="f3 text--accent ttu">Establishement</h5>
+            <p>First international event
+              NALDS
+            <br> Closed Entity in 1990
+            <p>5th NALDS Hosted in Agadir
+              <br> Morocco Full
+              member
+            <br> 2 Local Branches</p>
+          </div>  
+        </div>
+        <!-- <div class="tl-item">
+          
+          <div class="tl-bg" style="background-image: url(assets/images/1754078.png)"></div>
+          
+          <div class="tl-year">
+            <p class="f2 heading--sanSerif">1991</p>
+            <p class="f2 heading--sanSerif">1995</p>
+          </div>
+      
+          <div class="tl-content">
+            <h1 class="f3 text--accent ttu">Vestibulum laoreet lorem</h1>
+            <p>5th NALDS
+              Hosted in Agadir
+              <br> Morocco becomes Full
+              member
+            <br> 2 Local Branches</p>
+          </div>
+      
+        </div> -->  
+        <div class="tl-item">
+          
+          <div class="tl-bg" style="background-image: url(assets/images/AK3.png)"></div>
+          
+          <div class="tl-year">
+            <p class="f2 heading--sanSerif">1996</p>
+            <p class="f2 heading--sanSerif">2005</p>
+          </div>
+      
+          <div class="tl-content">
+            <h5 class="f3 text--accent ttu">Alumni Association</h5>
+            <p>Alumni Association
+              founded
+            <br>+ 20 Media content
+            <br>4 Local Branches</p>
+          </div>
+      
+        </div>
+        <!-- <div class="tl-item">
+          
+          <div class="tl-bg" style="background-image: url(https://placeimg.com/802/802/nature)"></div>
+          
+          <div class="tl-year">
+            <p class="f2 heading--sanSerif">2001</p>
+            <p class="f2 heading--sanSerif">2005</p>
+          </div>
+      
+          <div class="tl-content">
+            <h1 class="f3 text--accent ttu">Vestibulum laoreet lorem</h1>
+            <p>+ 20 Media content
+            <br>  4 Local Branches</p>
+          </div>
+      
+        </div> -->
+          <div class="tl-item">
+          
+          <div class="tl-bg" style="background-image: url({% static 'assets/images/event.jpg' %})"></div>
+          
+          <div class="tl-year">
+            <p class="f2 heading--sanSerif">2006</p>
+            <p class="f2 heading--sanSerif">2015</p>
+          </div>
+      
+          <div class="tl-content">
+            <h5 class="f3 text--accent ttu">1st Moroccan in AI</h5>
+            <p> +100 Media content
+            <br> Focus on ER
+            <br> 1st Moroccan in AI
+            <br> 9 Local Branches
+            <br> 540 Largest Conference
+            <br> Mena XLDS
+            <br> Contribution in the making of the AIESEC Way
+              </p>
+          </div>
+      
+        </div>     
+        <!-- <div class="tl-item">
+          
+          <div class="tl-bg" style="background-image: url(https://placeimg.com/802/802/nature)"></div>
+          
+          <div class="tl-year">
+            <p class="f2 heading--sanSerif">2011</p>
+            <p class="f2 heading--sanSerif">2015</p>
+          </div>
+      
+          <div class="tl-content">
+            <h1 class="f3 text--accent ttu">Vestibulum laoreet lorem</h1>
+            <p>9 Local
+              Branches
+            <br> 540 Largest
+              Conference
+            <br> Mena XLDS
+            <br> Shift In the EB
+              Timeline
+            <br> Contribution of Morocco
+              in the making of the
+              AIESEC Way</p>
+          </div>
+      
+        </div> -->
+        <div class="tl-item">
+          
+          <div class="tl-bg" style="background-image: url( {% static 'assets/images/Website11.png' %} )"></div>
+          
+          <div class="tl-year">
+            <p class="f2 heading--sanSerif">2016</p>
+            <p class="f2 heading--sanSerif">2022</p>
+          </div>
+      
+          <div class="tl-content">
+            <h5 class="f3 text--accent ttu">13 Branches</h5>
+            <p>Exchange at it best
+              <br> IPM Hosted in Marrakech
+              <br> 4 Awards
+              <br> Virtual
+              Management
+            <br> BD focus
+            <br> EwA Initiation & Focus on branding
+            <br> Encouraging
+              Innovation</p>
+          </div>
+      
+        </div>
+        <!-- <div class="tl-item">
+       
+      <div class="tl-bg" style="background-image: url(https://placeimg.com/800/800/nature)"></div>
+      
+      <div class="tl-year">
+        <p class="f2 heading--sanSerif">2020</p>
+        <p class="f2 heading--sanSerif">2022</p>
+      </div>
+  
+      <div class="tl-content">
+        <h1 class="f3 text--accent ttu">Mauris vitae nunc elem</h1>
+        <p>Virtual
+          Management
+         <br> BD focus
+         <br> EwA Initiation & Focus on branding
+         <br> Encouraging
+          Innovation
+         <br> Operational growth</p>
+      </div>
+  
+    </div>  -->
+   </section>
+  </div>
+ <!-- ***** Team: MCP-MCVPs ***** -->
+ <div class="container ">
+
+      <div class="row justify-content-center text-center mb-5 mt-5">
+        <div class="col-md-6 mb-5">
+          
+          <h2 class="about">Our Team</h2>
+          
+        </div>
+      </div>
+      
+
+      <div class="responsive-container-block">
+        {% for m in MCmembers  %}
+        <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+          <div class="team-card">
+            <div class="img-wrapper">
+              <img src="{{m.picture}} "
+                class="team-img" />
+            </div>
+            <p class="text-blk name">
+              {{m.name}}
+            </p>
+            <p class="text-blk position">MCVP OD
+            </p>
+            <div class="social-media-links">
+              <a href="{{s.twiter}}" target="_blank"><img
+                  src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" /></a>
+              <a href="{{s.facebook}}" target="_blank"><img
+                  src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" /></a>
+              <a href="{{s.insta}}" target="_blank"><img
+                  src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" /></a>
+              <a href="{{s.gmail}}" target="_blank"><img
+                  src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" /></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+        
+      </div>
+    </div>
+
+ <!-- ***** LC QUOTE/ Partners part ***** -->
+ 
+ <div class="home-slider owl-carousel " style="height: 400px;">
+  <div class="slider-item " style="height: 400px;background-image:url(assets/images/LC/Benimellal.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text  align-items-center justify-content-center">
+        <div class=" ftco-animate">
+          <div class="text text-center">
+            <h2 class="mt-5">Living with a mission, lightning the vision</h2>
+            <h3 class="mb-3" style="color:white;font-family: 'Licorice', cursive;">Halala</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-item " style="height: 400px;background-image:url(assets/images/LC/fez.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text  align-items-center justify-content-center">
+        <div class=" ftco-animate">
+          <div class="text text-center">
+            <h2 class="mt-5">Living with a mission, lightning the vision</h2>
+            <h3 class="mb-3"style="color:white;font-family: 'Licorice', cursive;">Fezberg</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-item " style="height: 400px;background-image:url(assets/images/LC/agadir.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text  align-items-center justify-content-center">
+        <div class="ftco-animate">
+          <div class="text text-center">
+            <h2 class="mt-5">Living with a mission, lightning the vision</h2>
+            <h3 class="mb-3"style="color:white; font-family: 'Licorice', cursive;">Gadirians</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <!-- ***** Why, What, How ***** -->
+  <div class="">
+    <div class="row justify-content-center text-center mt-5 col-lg-12">
+      <div class="col-md-6 mb-5">
+        <h2 class="about">Our Motivation</h2>
+      </div>
+    </div>
+    <section id="motivation" class="col-lg-11">
+      {%for k in mc  %}
+        <!--first section-->
+        <div class="row align-items-center how-it-works d-flex">
+          <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center">
+            <div class="circle font-weight-bold">What</div>
+          </div>
+          <div class="col-6">
+            <h5>What</h5>
+            <p>{{k.what}}</p>
+          </div>
+        </div>
+        <!--path between 1-2-->
+        <div class="row timeline2">
+          <div class="col-2">
+            <div class="corner top-right"></div>
+          </div>
+          <div class="col-8">
+            <hr/>
+          </div>
+          <div class="col-2">
+            <div class="corner left-bottom"></div>
+          </div>
+        </div>
+        <!--second section-->
+        <div class="row align-items-center justify-content-end how-it-works d-flex">
+          <div class="col-6 text-right">
+            <h5>How</h5>
+            <p>{{k.how}}</p>
+          </div>
+          <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center">
+            <div class="circle font-weight-bold">How</div>
+          </div>
+        </div>
+        <!--path between 2-3-->
+        <div class="row timeline2">
+          <div class="col-2">
+            <div class="corner right-bottom"></div>
+          </div>
+          <div class="col-8">
+            <hr/>
+          </div>
+          <div class="col-2">
+            <div class="corner top-left"></div>
+          </div>
+        </div>
+        <!--third section-->
+        <div class="row align-items-center how-it-works d-flex">
+          <div class="col-2 text-center top d-inline-flex justify-content-center align-items-center">
+            <div class="circle font-weight-bold">Why</div>
+          </div>
+          <div class="col-6">
+            <h5>Why</h5>
+            <p> {{k.why}}</p>
+          </div>
+        </div>
+        {%endfor%}
+      </section>
+  </div>
+
+  <!-- <div class="container mt-5">
+    <div class="row justify-content-center text-center mb-5 mt-5">
+      <div class="col-md-6 mb-5 ">
+        
+        <h2 class="about">Our Partners</h2>
+        
+      </div>
+    </div>
+  <div class="sliderP col-lg-12">
+    <div class="slideP-track col-lg-12">
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slideP">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+      </div>
+    </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="weekly-offers">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading text-center">
+            <h2>Best Weekly Offers In Each City</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-weekly-offers owl-carousel">
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/offers-01.jpg" alt="">
+                <div class="text">
+                  <h4>Havana<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
+                  <h6>$420<br><span>/person</span></h6>
+                  <div class="line-dec"></div>
+                  <ul>
+                    <li>Deal Includes:</li>
+                    <li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
+                    <li><i class="fa fa-plane"></i> Airplane Bill Included</li>
+                    <li><i class="fa fa-building"></i> Daily Places Visit</li>
+                  </ul>
+                  <div class="main-button">
+                    <a href="reservation.html">Make a Reservation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/offers-02.jpg" alt="">
+                <div class="text">
+                  <h4>Kingston<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
+                  <h6>$420<br><span>/person</span></h6>
+                  <div class="line-dec"></div>
+                  <ul>
+                    <li>Deal Includes:</li>
+                    <li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
+                    <li><i class="fa fa-plane"></i> Airplane Bill Included</li>
+                    <li><i class="fa fa-building"></i> Daily Places Visit</li>
+                  </ul>
+                  <div class="main-button">
+                    <a href="reservation.html">Make a Reservation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/offers-03.jpg" alt="">
+                <div class="text">
+                  <h4>George Town<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
+                  <h6>$420<br><span>/person</span></h6>
+                  <div class="line-dec"></div>
+                  <ul>
+                    <li>Deal Includes:</li>
+                    <li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
+                    <li><i class="fa fa-plane"></i> Airplane Bill Included</li>
+                    <li><i class="fa fa-building"></i> Daily Places Visit</li>
+                  </ul>
+                  <div class="main-button">
+                    <a href="reservation.html">Make a Reservation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/offers-01.jpg" alt="">
+                <div class="text">
+                  <h4>Havana<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
+                  <h6>$420<br><span>/person</span></h6>
+                  <div class="line-dec"></div>
+                  <ul>
+                    <li>Deal Includes:</li>
+                    <li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
+                    <li><i class="fa fa-plane"></i> Airplane Bill Included</li>
+                    <li><i class="fa fa-building"></i> Daily Places Visit</li>
+                  </ul>
+                  <div class="main-button">
+                    <a href="reservation.html">Make a Reservation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/offers-02.jpg" alt="">
+                <div class="text">
+                  <h4>Kingston<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
+                  <h6>$420<br><span>/person</span></h6>
+                  <div class="line-dec"></div>
+                  <ul>
+                    <li>Deal Includes:</li>
+                    <li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
+                    <li><i class="fa fa-plane"></i> Airplane Bill Included</li>
+                    <li><i class="fa fa-building"></i> Daily Places Visit</li>
+                  </ul>
+                  <div class="main-button">
+                    <a href="reservation.html">Make a Reservation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/offers-03.jpg" alt="">
+                <div class="text">
+                  <h4>George Town<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
+                  <h6>$420<br><span>/person</span></h6>
+                  <div class="line-dec"></div>
+                  <ul>
+                    <li>Deal Includes:</li>
+                    <li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
+                    <li><i class="fa fa-plane"></i> Airplane Bill Included</li>
+                    <li><i class="fa fa-building"></i> Daily Places Visit</li>
+                  </ul>
+                  <div class="main-button">
+                    <a href="reservation.html">Make a Reservation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="more-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="left-image">
+            <img src="assets/images/about-left-image.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h2>Discover More About Our Country</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="info-item">
+                <h4>150.640 +</h4>
+                <span>Total Guests Yearly</span>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="info-item">
+                <h4>175.000+</h4>
+                <span>Amazing Accomoditations</span>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="info-item">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h4>12.560+</h4>
+                    <span>Amazing Places</span>
+                  </div>
+                  <div class="col-lg-6">
+                    <h4>240.580+</h4>
+                    <span>Different Check-ins Yearly</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          <div class="main-button">
+            <a href="reservation.html">Discover More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="best-locations">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading text-center">
+            <h2>Best Locations In Caribbeans</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          </div>
+        </div>
+        <div class="col-lg-8 offset-lg-2">
+          <div class="options">
+            <div class="option active" style="--optionBackground:url(https://buttoncreatives.com/html/woox/assets/images/best-01.jpg);">
+               <div class="shadow"></div>
+               <div class="label">
+                  <div class="icon">
+                     <i class="fas fa-expand"></i>
+                  </div>
+                  <div class="info">
+                     <div class="main">Havana</div>
+                     <div class="sub">Population: 2M</div>
+                  </div>
+               </div>
+            </div>
+            <div class="option" style="--optionBackground:url(https://buttoncreatives.com/html/woox/assets/images/best-02.jpg);">
+               <div class="shadow"></div>
+               <div class="label">
+                  <div class="icon">
+                    <i class="fas fa-expand"></i>
+                  </div>
+                  <div class="info">
+                     <div class="main">Kingston</div>
+                     <div class="sub">Population: 3.5M</div>
+                  </div>
+               </div>
+            </div>
+            <div class="option" style="--optionBackground:url(https://buttoncreatives.com/html/woox/assets/images/best-03.jpg);">
+               <div class="shadow"></div>
+               <div class="label">
+                  <div class="icon">
+                    <i class="fas fa-expand"></i>
+                  </div>
+                  <div class="info">
+                     <div class="main">London</div>
+                     <div class="sub">Population: 4.1M</div>
+                  </div>
+               </div>
+            </div>
+            <div class="option" style="--optionBackground:url(https://buttoncreatives.com/html/woox/assets/images/best-04.jpg);">
+               <div class="shadow"></div>
+               <div class="label">
+                  <div class="icon">
+                    <i class="fas fa-expand"></i>
+                  </div>
+                  <div class="info">
+                     <div class="main">Pristina</div>
+                     <div class="sub">Population: 520K</div>
+                  </div>
+               </div>
+            </div>
+            <div class="option" style="--optionBackground:url(https://buttoncreatives.com/html/woox/assets/images/best-05.jpg);">
+               <div class="shadow"></div>
+               <div class="label">
+                  <div class="icon">
+                    <i class="fas fa-expand"></i>
+                  </div>
+                  <div class="info">
+                     <div class="main">Paris</div>
+                     <div class="sub">Population: 3M</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="main-button text-center">
+            <a href="deals.html">Discover All Places</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="call-to-action">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2>Are You Looking for an opportunity to grow?</h2>
+          <h4>Sign-up here and wait for your manager to contact you</h4>
+        </div>
+        <div class="col-lg-4">
+          <div class="border-button">
+            <a href="https://aiesec.org/">Participant</a>
+          </div>
+          <div class="border-button">
+            <a href="https://aiesec.org/">Be Member</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2022 MC AIESEC in Morocco</p>
+          <br> <p style="font-family: 'Licorice', cursive;">Daring to reach the optimum state</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static ' vendor/jquery/jquery.min.js ' %} "></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js ' %} "></script>
+
+  <script src="{% static 'assets/js/isotope.min.js ' %} "></script>
+  <script src="{% static 'assets/js/owl-carousel.js ' %} "></script>
+  <script src="{% static 'assets/js/wow.js ' %} "></script>
+  <script src="{% static 'assets/js/tabs.js ' %} "></script>
+  <script src="{% static 'assets/js/popup.js ' %} "></script>
+  <script src="{% static 'assets/js/custom.js ' %} "></script>
+
+  <script>
+    $(".option").click(function(){
+      $(".option").removeClass("active");
+      $(this).addClass("active"); 
+    });
+
+     /*Loader
+     $(window).ready(function(){
+     $('#js-preloader').fadeOut();
+     $('main').fadeIn();
+});*/
+
+  </script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/main.js"></script>
+  </body>
+
+</html>
