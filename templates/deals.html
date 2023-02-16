@@ -15,21 +15,15 @@
     <title>AIESEC IN MOROCCO</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/templatemo-woox-travel.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
-    <link rel="stylesheet"href="{% static 'https://unpkg.com/swiper@7/swiper-bundle.min.css' %}"/>
-<!--
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
-TemplateMo 580 Woox Travel
-
-https://templatemo.com/tm-580-woox-travel
-
--->
   </head>
 
 <body>
@@ -55,11 +49,23 @@ https://templatemo.com/tm-580-woox-travel
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                      <li><a href="{% static 'index.html' %}">Home</a></li>
-                      <li><a href="{% static 'about.html' %}">About</a></li>
-                      <li><a href="{% static 'deals.html' %}" class="active">Events</a></li>
-                      <li><a href="{% static 'reservation.html' %}">Contact-Us</a></li>
-                      <li><a href="{% static 'reservation.html' %}">Book Yours</a></li>
+                      <li><a href="index.html">Home</a></li>
+                      <li>
+                        <div class="dropdown">
+                          <a class="" href="#">About
+                            <i class="fas fa-angle-down"></i>
+                          </a>
+                          <div class="drop-content">
+                            <a  href="about.html">About Us</a>
+                            {%for k in navBarPack%}
+                            <a href="../aiesec_project/{{k.id}}">About {{k.name}}</a>
+                            {%endfor%}
+                          </div>
+                        </div>  
+                    </li>
+                      <li><a href="deals.html" class="active">Events</a></li>
+                      <li><a href="reservation.html">Contact-Us</a></li>
+                      <li><a href="morocco.html">Morocco</a></li>
                     </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -97,86 +103,34 @@ https://templatemo.com/tm-580-woox-travel
         <div class="col-lg-12">
           <div class="owl-courses-item owl-carousel">
   
-          {% for m in events %}
-          <div class="item">
-           <img style='max-height:240px;min-height:240px;object-fit: cover;'src="{% static 'assets/images/aiesec ai.png' %}">
-               <div class="typeabs">5 Tickets Left!</div> 
-              <div  style='max-height:300px;min-height:300px;'  class="down-content">
-              <form action="meeting-details.php" method="POST">
-                <h4>
-                  <input style="border:none;background-color:transparent;font-weight:100;font-size:6px;color:transparent;text-align:center;"  type="submit" name="walou" value="Morocco green week 2022/2023"/>
-                </h4>
-              </form>
-              <p style="text-align:center;font-weight:bold;font-size:20px;color:black;">{{m.name}}</p>
-                <p class="eventlocation"> <i class="ri-map-pin-line"></i> {{m.venue_address}}</p>
-                <p class="eventdate"> <i class="ri-calendar-check-fill"></i>{{m.date}}</p>
-                <div class="main-button justify-content-center" style="  align-items: center;margin-left:25%; ">
-                  <a href="{{m.link_page}}" target="_blank">Register</a>
-                </div>
-                <!-- <p class="tickleft">  5 Tickets Left!</p>  -->
-              </div>
-            </div>
-            {% endfor %}
-           
-            
+          {% for l in events%}
+            <div class="item">
+                <img style='max-height:240px;min-height:240px;object-fit: cover;'src="http://127.0.0.1:8000/{{l.picture}}">
+                   <div class="typeabs"> 5 Tickets Left!</div>
+                   <div  style='max-height:300px;min-height:300px;'  class="down-content">
+                   <form action="meeting-details.php" method="POST">
+                     <h4>
+                       <input style="border:none;background-color:transparent;font-weight:100;font-size:6px;color:transparent;text-align:center;"  type="submit" name="walou" value="Morocco green week 2022/2023"/>
+                     </h4>
+                   </form>
+                   <p style="text-align:center;font-weight:bold;font-size:20px;color:black;">{{l.name}}</p>
+                     <p class="eventlocation"> <i class="ri-map-pin-line"></i> {{l.venue_address}}</p>
+                     <p class="eventdate"> <i class="ri-calendar-check-fill"></i>{{l.date}}</p>
+                     <div class="main-button justify-content-center" style="  align-items: center;margin-left:25%; ">
+                      <a href="{{l.link_page}}" target="_blank">Register</a>
+                    </div>
+                     <!-- <p class="tickleft">  5 Tickets Left!</p>  -->
+                   </div>
+               </div>
+               {% endfor %}
+
+
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-
-
-
-  <!-- <div class="search-form">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <form id="search-form" name="gs" method="submit" role="search" action="#">
-            <div class="row">
-              <div class="col-lg-2">
-                <h4>Sort Deals By:</h4>
-              </div>
-              <div class="col-lg-4">
-                  <fieldset>
-                      <select name="Location" class="form-select" aria-label="Default select example" id="chooseLocation" onChange="this.form.click()">
-                          <option selected>Destinations</option>
-                          <option type="checkbox" name="option1" value="Italy">Italy</option>
-                          <option value="France">France</option>
-                          <option value="Switzerland">Switzerland</option>
-                          <option value="Thailand">Thailand</option>
-                          <option value="Australia">Australia</option>
-                          <option value="India">India</option>
-                          <option value="Indonesia">Indonesia</option>
-                          <option value="Malaysia">Malaysia</option>
-                          <option value="Singapore">Singapore</option>
-                      </select>
-                  </fieldset>
-              </div>
-              <div class="col-lg-4">
-                  <fieldset>
-                      <select name="Price" class="form-select" aria-label="Default select example" id="choosePrice" onChange="this.form.click()">
-                          <option selected>Price Range</option>
-                          <option value="100">$100 - $250</option>
-                          <option value="250">$250 - $500</option>
-                          <option value="500">$500 - $1,000</option>
-                          <option value="1000">$1,000 - $2,500</option>
-                          <option value="2500+">$2,500+</option>
-                      </select>
-                  </fieldset>
-              </div>
-              <div class="col-lg-2">                        
-                  <fieldset>
-                      <button class="border-button">Search Results</button>
-                  </fieldset>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
   <div class="amazing-deals">
     <div class="container">
@@ -187,24 +141,22 @@ https://templatemo.com/tm-580-woox-travel
             <p>Such events are either organized to create educative spaces for the membership, or to promote the SDGs to non AIESECers and spread our impact.</p>
           </div>
         </div>
-
-        {% for m in events %}
+       
+      
+        {% for l in events%}
+       
         <div class="col-lg-6 col-sm-6">
           <div class="item">
             <div class="row">
               <div class="col-lg-6">
                 <div class="image">
-                  <img src="{% static 'assets/images/deals-01.jpg' %}" alt="">
+                  <img src="http://127.0.0.1:8000/{{l.picture}}" alt="">
                 </div>
               </div>
               <div class="col-lg-6 align-self-center">
                 <div class="content">
-                  {% if m.AIESECERS_or_youth %}
-                  <span class="info">*AIESECers only</span>
-                  {% else %}
-                  <span class="info">*For every one</span>
-                  {% endif %}
-                  <h4>{{m.name}}</h4>
+                  <span class="info">*Offer Until {{l.date}}</span>
+                  <h4>{{l.name}}</h4>
                   <div class="row">
                     <div class="col-6">
                       <i class="fa fa-clock"></i>
@@ -215,16 +167,18 @@ https://templatemo.com/tm-580-woox-travel
                       <span class="list">Daily Places</span>
                     </div>
                   </div>
-                  <p>{{m.description}}</p>
+                  <p>
+                    http://127.0.0.1:8000/{{l.picture}}
+                    {{l.description}}</p>
                   <div class="main-button">
-                    <a href="{{m.link_page}}" target="_blank">See More</a>
+                    <a href="reservation.html">See More</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {% endfor %}
+        {%endfor%}
         <!-- <div class="col-lg-12">
           <ul class="page-numbers">
             <li><a href="#"><i class="fa fa-arrow-left"></i></a></li>
@@ -288,11 +242,14 @@ https://templatemo.com/tm-580-woox-travel
       $(this).addClass("active"); 
     });
 
-     /*Loader
-     $(window).ready(function(){
-     $('#js-preloader').fadeOut();
-     $('main').fadeIn();
-});*/
+     // Dropdown Menu Fade    
+    jQuery(document).ready(function(){
+        $(".dropdown").hover(
+            function() { $('.dropdown-menu', this).fadeIn("fast");
+            },
+            function() { $('.dropdown-menu', this).fadeOut("fast");
+        });
+    });
 
 $('.owl-courses-item').owlCarousel({
 		items:4,

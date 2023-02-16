@@ -6,7 +6,11 @@ urlpatterns = [
      path('', views.Home ) ,
      path('about/', views.About ) ,
      path('events/', views.events ) ,
-     path('contact/', views.Contact ) ,
+     path('morocco/', views.Morocco ) ,
+     path('contact/', views.Contact ) ,   
+     path('aiesec_project/<int:id>', views.project ) ,   
+
+
      path('log/singin/', views.SigIn ) ,
      path('log/in/', views.Login ) ,
      path('log/changepassword/', views.ChangePassword ) ,

@@ -14,7 +14,7 @@ import string
 from django.contrib.auth.models import User
 from .forms import *
 from .serializable import *
-from .Manipulation import *
+from .Manipulation import *    
 from django.shortcuts import * 
 from django.http import HttpResponse
 from django.template import loader
@@ -26,25 +26,94 @@ def About(request):
     lcser = LCser(lcs , many=True).data
     mcSer = MCTEAMser(MCTEAM.objects.all(),many = True).data
     mc = MCserializers(MC.objects.all(),many = True ).data
+
+    aisec = AIESEC_projects.objects.all()
+    aboutBtn = []
+    for a in aisec :
+        aboutBtn.append({
+            'name' : a.name_surtcut ,
+            'id' : a.id ,
+        })
+
+
     return render(request ,'about.html',{'lcs':lcser,'MCmembers':mcSer,'mc':mc})  
     # return HttpResponse(t.render(c, request), content_type='application/xhtml+xml')  
     
 
+
+     
 def Home(request):
     fq = FQ.objects.all()
-    
-    return render(request , 'index.html',{'fq':FQserializers(fq,many=True).data})
+    projects = AIESEC_projects.objects.all()
+    aisec = AIESEC_projects.objects.all()
+    aboutBtn = []
+    for a in aisec :
+        aboutBtn.append({
+            'name' : a.name_surtcut ,
+            'id' : a.id ,
+        })
+    return render(request , 'index.html',{'fq':FQserializers(fq,many=True).data,
+                                          'projects' : AIESEC_projects_Serializers(projects , many = True).data,
+                                          'navBarPack' : aboutBtn ,
+                                          })
+   
 
 def events(request):
     events = Event.objects.all()
-    return render(request , 'deals.html' ,{ 'events' : Eventserializers(events , many=True).data})
+
+    aisec = AIESEC_projects.objects.all()
+    aboutBtn = []
+    for a in aisec :
+        aboutBtn.append({
+            'name' : a.name_surtcut ,
+            'id' : a.id ,
+        })
+    return render(request , 'deals.html' ,
+                  { 'events' : Eventserializers(events , many=True).data,
+                    'navBarPack' : aboutBtn ,
+                   })
+
+
+def Morocco (request) : 
+    aisec = AIESEC_projects.objects.all()
+    aboutBtn = []
+    for a in aisec :
+        aboutBtn.append({
+            'name' : a.name_surtcut ,
+            'id' : a.id ,
+        })
+    return render(request , 'morocco.html' ,
+                  {
+                    'navBarPack' : aboutBtn ,
+                  }
+                   )
+
+
+
+def project (request,id) :
+    
+    aisec = AIESEC_projects.objects.all()
+    aboutBtn = []
+    for a in aisec :
+        aboutBtn.append({
+            'name' : a.name_surtcut ,
+            'id' : a.id ,
+        })
+    if AIESEC_projects.objects.filter(id=id).count() :
+        department = AIESEC_projects.objects.get(id=id)
+        tb = AIESEC_projects_Serializers(department).data
+        rq = projects_by_products.objects.filter(project=department)
+        projects = projects_by_products_Serializers(rq,many = True).data
+        print(rq)
+    return render(request , 'ogtaPage.html' , {'data' : tb,'relProj' : projects , 'navBarPack' : aboutBtn} )
+
 
 def Contact(request):
     form = Forms.objects.all()
 
     return render(request,'reservation.html',{'forms':FormsSerializers(form, many=True).data})
 
-
+  
 def SigIn(request):
 
     if request.method == "POST":

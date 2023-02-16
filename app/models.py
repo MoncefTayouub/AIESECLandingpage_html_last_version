@@ -61,8 +61,8 @@ class Event (models.Model):
   
     limited_places_OR_nonlimited = models.BooleanField(null=True,blank=True)
     city_name = models.TextField()
-    description = models.TextField()
-
+    description = models.TextField()    
+     
 class FQ (models.Model):
     Question = models.TextField()
     Answer = models.TextField()
@@ -72,3 +72,20 @@ class Forms (models.Model):
     joinAIESC =  models.TextField()
     beApartner =  models.TextField()
     EP =  models.TextField()  
+
+class AIESEC_projects (models.Model) :
+    name = models.TextField(null=True,blank=True)
+    name_surtcut = models.TextField()
+    desc = models.TextField()
+    logo = models.ImageField(upload_to=upload_path, blank=True)
+    cover = models.ImageField(upload_to=upload_path, blank=True)
+    link = models.TextField(null=True,blank=True)
+
+class projects_by_products (models.Model) :
+    project = models.ForeignKey(
+        AIESEC_projects,
+        on_delete=models.CASCADE, 
+    )
+    picture = models.ImageField(upload_to=upload_path, blank=True)
+    name = models.TextField()
+    desc = models.TextField() 

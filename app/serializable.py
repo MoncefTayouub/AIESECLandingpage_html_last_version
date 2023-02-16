@@ -4,6 +4,17 @@ from .models import *
 
 
 
+
+class AIESEC_projects_Serializers(serializers.ModelSerializer):
+    class Meta :
+        fields = '__all__'
+        model = AIESEC_projects
+    
+class projects_by_products_Serializers(serializers.ModelSerializer):
+    class Meta :
+        fields = '__all__'
+        model = projects_by_products
+  
 class MCserializers(serializers.ModelSerializer):
     class Meta :
         fields = '__all__'
